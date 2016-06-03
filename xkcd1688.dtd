@@ -1,0 +1,13 @@
+<!ELEMENT xkcd1688 (node|leaf)+>
+<!ELEMENT node (question,option+,range+)>
+<!ATTLIST node id ID #REQUIRED>
+<!ELEMENT option (#PCDATA)>
+<!ATTLIST option target IDREF #IMPLIED>
+<!ELEMENT question (#PCDATA)>
+<!ELEMENT range (begin, end)>
+<!ELEMENT begin EMPTY>
+<!ATTLIST begin year CDATA #REQUIRED>
+<!ELEMENT end EMPTY>
+<!ATTLIST end year CDATA #REQUIRED>
+<!ELEMENT leaf (#PCDATA|range)*>
+<!ATTLIST leaf id ID #REQUIRED>

@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<!DOCTYPE xkcd1688 SYSTEM "xkcd1688.dtd">
+
+
+<xkcd1688>
+  <node id="root">
+    <question>
+      Start here
+    </question>
+    <option target="istanbul">
+      Go
+    </option>
+    <range>
+      <begin year="1800" />
+      <end year="2025" />
+    </range>
+  </node>
+  
+  <node id="istanbul">
+    <question>
+      Istanbul or Constantinople?
+    </question>
+    <option target="canada-alaska-tokyo">
+      Constantinople
+    </option>
+    <option target="foo">
+      Neither
+    </option>
+    <option target="foo">
+      Istanbul
+    </option>
+    <range>
+      <begin year="1800" />
+      <end year="2250" />
+    </range>
+  </node>
+
+  <node id="canada-alaska-tokyo">
+    <question>
+      Do any of these exist?
+      Independent Canada?
+      US Territory of Alaska?
+      Tokyo?
+    </question>
+    <option target="holy-roman-empire">
+      No
+    </option>
+    <option target="south-africa">
+      Yes
+    </option>
+    <range>
+      <begin year="1800" />
+      <end year="1928" />
+    </range>
+  </node>      
+  
+  <node id="holy-roman-empire">
+    <question>
+      The Holy Roman Empire?
+    </question>
+    <option target="hre-yes">
+      Yes
+    </option>
+    <option target="US">
+      No
+    </option>
+    <range>
+      <begin year="1800" />
+      <end year="1867" />
+    </range>
+  </node>
+
+  <leaf id="hre-yes">
+    1805 or earlier (before this point the modern idea of a
+    complete political map of the world gets hard to apply)
+  </leaf>
+
+  <node id="US">
+    <question>
+      The United States?
+    </question>
+    <option target="no-us">
+      No
+    </option>
+    <option target="texas-is">
+      Yes
+    </option>
+    <range>
+      <begin year="1806" />
+      <end year="1867" />
+    </range>
+  </node>
+
+  <leaf id="no-us">
+    How sure are you that this map is in English?
+  </leaf>
+
+  <node id="texas-is">
+    <question>
+      Texas is...
+    </question>
+    <option target="florida-is">
+      Part of Mexico
+    </option>
+    <option target="texas-independent">
+      Independent
+    </option>
+    <option target="russia-sea-of-japan">
+      Part of the US
+    </option>
+    <range>
+      <begin year="1806" />
+      <end year="1867" />
+    </range>
+  </node>
+
+  <node id="florida-is">
+    <question>
+      Florida is parth of...
+    </question>
+    <option target="paraguay">
+      Spain
+    </option>
+    <option target="venezuela-ecuador">
+      US
+    </option>
+    <range>
+      <begin year="1806" />
+      <end year="1836" />
+    </range>
+  </node>
+
+  <node id="paraguay">
+    <question>
+      Paraguay?
+    </question>
+    <option target="paraguay-no">
+      No
+    </option>
+    <option target="paraguay-yes">
+      Yes
+    </option>
+    <range>
+      <begin year="1806" />
+      <end year="1817" />
+    </range>
+  </node>
+
+  <leaf id="paraguay-no">
+    <range>
+      <begin year="1806" />
+      <end year="1810" />
+    </range>
+  </leaf>
+  <leaf id="paraguay-yes">
+    <range>
+      <begin year="1811" />
+      <end year="1817" />
+  </leaf>
+
+  <node id="venezuela-ecuador">
+    <question>
+      Venezuela and/or Ecuador?
+    </question>
+    <option target="venezuela-ecuador-no">
+      No
+    </option>
+    <option target="venezuela-ecuador-yes">
+      Yes
+    </option>
+    <range>
+      <begin year="1818" />
+      <end year="1833" />
+    </range>
+  </node>
+
+  <leaf id="venezuela-ecuador-no">
+    <range>
+      <begin year="1818" />
+      <end year="1829" />
+    </range>
+  </leaf>
+  <leaf id="venezuela-ecuador-yes">
+    <range>
+      <begin year="1830" />
+      <end year="1833" />
+    </range>
+  </leaf>
+  
+  <node id="south-africa">
+    <question>
+      South Africa?
+    </question>
+    <option target="rhodesia">
+    </option>
+    <range>
+      <begin year="" />
+      <end year="" />
+    </range>
+  </node>
+
+</xkcd1688>
