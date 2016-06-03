@@ -200,4 +200,9 @@
     </range>
   </node>
 
+
+
+  <leaf id="foo" />
+  <leaf id="texas-independent" />
+  <leaf id="russia-sea-of-japan" />
 </xkcd1688>
