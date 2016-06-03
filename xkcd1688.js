@@ -5,7 +5,7 @@ d3.xml("xkcd1688.xml", function(error, xkcd1688) {
     if(error) throw error;
     xkcd_data = xkcd1688;
     
-    var vertices = [].map.call(
+    var vertices = $.map(
 	xkcd1688.querySelectorAll("node, leaf"),
 	function(node) {
 	    return {
