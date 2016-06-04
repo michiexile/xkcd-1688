@@ -187,7 +187,65 @@
       <end year="1833" />
     </range>
   </leaf>
+
+  <leaf id="texas-independent">
+    <range>
+      <begin year="1834" />
+      <end year="1845" />
+    </range>
+  </leaf>
   
+  <node id="russia-sea-of-japan">
+    <question>
+      Does Russia border the Sea of Japan?
+    </question>
+    <option target="us-southern-border">
+      No
+    </option>
+    <option target="russia-sea-of-japan-yes">
+      Yes
+    </option>
+    <range>
+      <begin year="1846" />
+      <end year="1867" />
+    </range>
+  </node>
+
+  <node id="us-southern-border">
+    <question>
+      The USs southern border looks...
+    </question>
+    <option target="us-southern-weird">
+      Weird
+    </option>
+    <option target="us-southern-normal">
+      Normal
+    </option>
+    <range>
+      <begin year="1846" />
+      <end year="1856" />
+    </range>
+  </node>
+
+  <leaf id="russia-sea-of-japan-yes">
+    <range>
+      <begin year="1858" />
+      <end year="1867" />
+    </range>
+  </leaf>
+  <leaf if="us-southern-weird">
+    <range>
+      <begin year="1846" />
+      <end year="1853" />
+    </range>
+  </leaf>
+  <leaf if="us-southern-normal">
+    <range>
+      <begin year="1854" />
+      <end year="1856" />
+    </range>
+  </leaf>
+
   <node id="south-africa">
     <question>
       South Africa?
@@ -200,10 +258,6 @@
     </range>
   </node>
 
-
-
   <leaf id="foo" />
-  <leaf id="texas-independent" />
-  <leaf id="russia-sea-of-japan" />
   <leaf id="rhodesia" />
 </xkcd1688>

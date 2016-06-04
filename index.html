@@ -2,20 +2,31 @@
 <html> <head>
 <title>XKCD 1688 visualization</title>
 
+<style>
+.link {
+  stroke: black;
+  stroke-opacity: 0.6;
+}
+.timeline-backdrop {
+  fill: black;
+  fill-opacity: 0.4;
+}
+.timeline-active {
+  fill: blue;
+  fill-opacity: 0.8;
+}
+</style>
+
 </head>
 
 <body>
 
-
-<canvas id="canvas" height=600 width=600>
-This app draws a visualization using JavaScript.
-Without it this will be a boring experience.
-</canvas>
-
+<div id="svg_canvas">
+</div>
 
 <hr>
 <address></address>
-<!-- hhmts start -->Last modified: Fri Jun  3 11:50:02 CEST 2016 <!-- hhmts end -->
+<!-- hhmts start -->Last modified: Fri Jun  3 23:33:48 CEST 2016 <!-- hhmts end -->
 </body>
 <script src="jquery-1.12.4.min.js"></script>
 <script src="d3.v3.min.js"></script>
