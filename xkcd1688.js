@@ -132,8 +132,7 @@ function ask_question(xkcd1688, node) {
 	    .text(this[0] + "-" + this[1]);
     });
     if(node.prop('tagName') == 'leaf') {
-	$('#question').remove();
-	$('#range').html(rangetext);
+	$('#question').html(rangetext);
     }
 }
 

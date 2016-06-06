@@ -1,15 +1,22 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans);
 
-body, html {
-    padding: 0;
-    margin: 0;
+html, body {
+    margin: 0px;
+    padding: 0px;
 }
 
-body > * {
-    margin-left: 3em;
-    margin-right: 3em;
+#footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
 }
 
+#body {
+    margin: 3em;
+    margin-bottom: calc(50px + 6em);
+    overflow: auto;
+}
 
 html, * {
     font-family: "PT Sans", "Lucinda Sans Unicode", sans-serif;
@@ -18,13 +25,14 @@ html, * {
 }
 
 #footer {
-    width: 100%;
-    margin: 0px;
-    margin-top: 3em;
-    padding: 3em;
+    padding: 3em 0px 3em 0px;
+    height: 50px;
     background: lightsteelblue;
     position: fixed;
     bottom: 0px;
+}
+#footer > * {
+    margin-left: 3em;
 }
 #footer > span {
     display: block;
@@ -64,7 +72,6 @@ svg text {
     font-size: 10;
 }
 #q-and-o {
-    height: 100px;
     width: 408px;
     text-align: justify
 }
@@ -74,7 +81,7 @@ svg text {
     width: -webkit-calc(100% - 12px);
     width: -o-calc(100% - 12px);
     width: calc(100% - 12px);
-    height: 50px;
+    height: 75px;
     border-right: 2px solid gray;
     border-bottom: 2px solid gray;
     margin-left: 0px;
@@ -90,7 +97,7 @@ svg text {
 }
 #options div {
     display: inline-block;
-    height: 30px;
+    height: 50px;
     border-right: 2px solid gray;
     border-bottom: 2px solid gray;
     margin-top: 5px;
@@ -103,24 +110,29 @@ svg text {
 #options div:hover {
     background: rgba(0,0,0,0.1);
 }
+#svg_canvas {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 5px;
+}
 .button-1 {
     width: 95%;
-    width: -moz-calc(100% - 12px);
-    width: -webkit-calc(100% - 12px);
-    width: -o-calc(100% - 12px);
-    width: calc(100% - 12px);
+    width: -moz-calc(100% - 14px);
+    width: -webkit-calc(100% - 14px);
+    width: -o-calc(100% - 14px);
+    width: calc(100% - 14px);
 }
 .button-2 {
     width: 45%;
-    width: -moz-calc(50% - 12px);
-    width: -webkit-calc(50% - 12px);
-    width: -o-calc(50% - 12px);
-    width: calc(50% - 12px);
+    width: -moz-calc(50% - 14px);
+    width: -webkit-calc(50% - 14px);
+    width: -o-calc(50% - 14px);
+    width: calc(50% - 14px);
 }
 .button-3 {
     width: 30%;
-    width: -moz-calc(33.33% - 12px);
-    width: -webkit-calc(33.33% - 12px);
-    width: -o-calc(33.33% - 12px);
-    width: calc(33.33% - 12px);
+    width: -moz-calc(33.33% - 14px);
+    width: -webkit-calc(33.33% - 14px);
+    width: -o-calc(33.33% - 14px);
+    width: calc(33.33% - 14px);
 }
