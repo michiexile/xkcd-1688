@@ -31,14 +31,14 @@ var year_scale = d3.scale.linear()
     .range([0, width]);
 
 axis.append('line')
-    .attr('x1', year_scale(1800))
-    .attr('x2', year_scale(1805))
+    .attr('x1', year_scale(1790))
+    .attr('x2', year_scale(1800))
     .attr('y1', height/2)
     .attr('y2', height/2)
     .attr('stroke-width', '2')
     .attr('class', 'intro');
 axis.append('line')
-    .attr('x1', year_scale(1805))
+    .attr('x1', year_scale(1800))
     .attr('x2', year_scale(2025))
     .attr('y1', height/2)
     .attr('y2', height/2)
@@ -76,7 +76,9 @@ axis.append('text')
     .text('2000');
 
 function ask_question(xkcd1688, node) {
-    $('#question').text(node.find("question").first().text().trim());
+    $('#question')
+	.html(node.find("question").first().text().trim()
+	     .replace(/\[/g,'<').replace(/\]/g,'>'));
 
     console.log(node.find('option'));
     var divs = d3.select('#options')
@@ -93,23 +95,46 @@ function ask_question(xkcd1688, node) {
 	    ask_question(xkcd1688,
 			 $(xkcd1688).find('#'+$(d).attr('target')).first());
 	})
-	.text(function(d) { return $(d).text().trim(); });
+	.attr('class', 'button-' + divs.size())
+	.html(function(d) {
+	    return $(d).text().trim()
+		.replace(/\[/g,'<').replace(/\]/g,'>');
+	});
 
+    var ranges = [];
+    node.find('range').each(function(index){
+	var begin = parseFloat($(this).find('begin').first().attr('year'));
+	if(isNaN(begin)) begin = 1800;
+	var end = parseFloat($(this).find('end').first().attr('year'));
+	if(isNaN(end)) end = 2030;
+	begin = Math.max(1800, begin);
+	end = Math.min(2025, end);
+	ranges.push([begin,end]);
+    });
+    
     $('.active').remove();
-    var begin = parseFloat(node.find('range > begin').attr('year'));
-    if(isNaN(begin)) begin = 1800;
-    var end = parseFloat(node.find('range > end').attr('year'));
-    if(isNaN(end)) end = 2030;
-    var begin = Math.max(1800, begin);
-    var end = Math.min(2025, end);
-    $('#range').text(begin + " " + end);
-    active.append('line')
-	.attr('x1', year_scale(begin))
-	.attr('x2', year_scale(end))
-	.attr('y1', height/2)
-	.attr('y2', height/2)
-	.attr('stroke-width', '4')
-	.attr('class', 'active');
+    var rangetext = ""
+    if(node.prop('tagName') == 'leaf') {
+	rangetext += node.text().trim()
+	    .replace(/\[/g,'<').replace(/\]/g,'>');
+	rangetext += '<br/>';
+    }
+    $(ranges).each(function(index){
+	rangetext += this[0] + "-" + this[1] + "<br/>";
+	active.append('line')
+	    .attr('x1', year_scale(this[0]))
+	    .attr('x2', year_scale(this[1]))
+	    .attr('y1', height/2)
+	    .attr('y2', height/2)
+	    .attr('stroke-width', '8')
+	    .attr('class', 'active')
+	    .append('title')
+	    .text(this[0] + "-" + this[1]);
+    });
+    if(node.prop('tagName') == 'leaf') {
+	$('#question').remove();
+	$('#range').html(rangetext);
+    }
 }
 
 

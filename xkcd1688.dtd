@@ -1,5 +1,5 @@
 <!ELEMENT xkcd1688 (node|leaf)+>
-<!ELEMENT node (question,option+,range+)>
+<!ELEMENT node (question,option+,range*)>
 <!ATTLIST node id ID #REQUIRED>
 <!ELEMENT option (#PCDATA)>
 <!ATTLIST option target IDREF #IMPLIED>

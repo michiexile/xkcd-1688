@@ -26,7 +26,7 @@
     <option target="ottoman-exist">
       Neither
     </option>
-    <option target="istanbul-and-sovie">
+    <option target="istanbul-and-soviet">
       Istanbul
     </option>
     <range>
@@ -432,7 +432,7 @@
   </leaf>
 
 
-  <node id="istanbul-soviet">
+  <node id="istanbul-and-soviet">
     <question>
       Does the Soviet Union exist?
     </question>
@@ -488,7 +488,7 @@
       One
     </option>
     <option target="one-large-germany">
-      One, but it's huge.
+      One, but it's [i]huge[/i].
     </option>
     <option target="two-germany">
       Two
@@ -504,7 +504,7 @@
       <end year="1945" />
     </range>
   </leaf>
-  <leaf id="two=germany">
+  <leaf id="two-germany">
     <range>
       <begin year="1946" />
       <end year="1947" />
@@ -747,8 +747,8 @@
     </range>
   </node>
   <leaf id="swamp-rabbit">
-    <range>
       April 20 1979
+    <range>
       <begin year="1979" />
       <end year="1980" />
     </range>
@@ -863,8 +863,8 @@
     </range>
   </leaf>
   <leaf id="yemen-germany-three">
-    <range>
       Mid-1990
+    <range>
       <begin year="1990" />
       <end year="1991" />
     </range>
@@ -1039,11 +1039,7 @@
 
 
   
-  
-
-
-
-  
+    
   <node id="ottoman-exist">
     <question>
       Does the Ottoman empire exist?
@@ -1071,7 +1067,7 @@
       No
     </option>
     <range>
-      <begin year="" />
+      <begin year="1922" />
       <end year="" />
     </range>
   </node>
@@ -1091,7 +1087,6 @@
       <end year="1991" />
     </range>
   </node>
-
   <leaf id="no-saudi-arabia">
     <range>
       <begin year="1922" />
@@ -1099,19 +1094,72 @@
     </range>
   </leaf>
 
-  
-
-
-
-  
-  <node id="">
+  <node id="north-korea">
     <question>
-
+      North Korea?
     </question>
-    <option target="">
+    <option target="zaire-hongkonguk">
+      Yes
+    </option>
+    <option target="saint-trimble">
       No
     </option>
-    <option target="">
+    <range>
+      <begin year="1922" />
+      <end year="1923" />
+    </range>
+    <range>
+      <begin year="1991" />
+      <end year="" />
+    </range>
+  </node>
+  
+  <node id="saint-trimble">
+    <question>
+      Saint Trimble's Island?
+    </question>
+    <option target="jan-mayen">
+      No
+    </option>
+    <option target="saint-trimble-yes">
+      Yes
+    </option>
+    <range>
+      <begin year="1922" />
+      <end year="1923" />
+    </range>
+  </node>
+  <leaf id="saint-trimble-yes">
+    No, I made that one up.
+  </leaf>
+  
+  <node id="jan-mayen">
+    <question>
+      Is Jan Mayen part of the Kingdom of Norway?
+    </question>
+    <option target="canada-alaska-tokyo">
+      Not yet
+    </option>
+    <option target="familiar-continents">
+      What?
+    </option>
+    <option target="pakistan">
+      Yes
+    </option>
+    <range>
+      <begin year="1922" />
+      <end year="1923" />
+    </range>
+  </node>
+
+  <node id="familiar-continents">
+    <question>
+      Can you see the familiar continents?
+    </question>
+    <option target="sirion-anduin">
+      No
+    </option>
+    <option target="earth">
       Yes
     </option>
     <range>
@@ -1120,11 +1168,417 @@
     </range>
   </node>
 
-  <leaf id="">
+  <node id="earth">
+    <question>
+      This sounds like a physical map or satellite photo.
+    </question>
+    <option target="lake-chad">
+      Yes, that's it.
+    </option>
     <range>
       <begin year="" />
       <end year="" />
     </range>
+  </node>
+
+  <node id="lake-chad">
+    <question>
+      Is Lake Chad missing?
+    </question>
+    <option target="american-prairies">
+      No
+    </option>
+    <option target="aral-sea">
+      Yes
+    </option>
+    <range>
+      <begin year="" />
+      <end year="" />
+    </range>
+  </node>
+
+  <node id="american-prairies">
+    <question>
+      How far east do the American prairies reach?
+    </question>
+    <option target="prairie-indiana">
+      Indiana
+    </option>
+    <option target="prairie-mississippi">
+      The Mississippi
+    </option>
+    <option target="salton-sea">
+      Nebraska
+    </option>
+    <option target="lake-volta">
+      What prairies?
+    </option>
+    <range>
+      <begin year="" />
+      <end year="1970" />
+    </range>
+  </node>
+  <leaf id="prairie-indiana">
+    <range>
+      <begin year="" />
+      <end year="1830" />
+    </range>
+  </leaf>
+  <leaf id="prairie-mississippi">
+    <range>
+      <begin year="1830" />
+      <end year="1880" />
+    </range>
+  </leaf>
+
+  <node id="salton-sea">
+    <question>
+      Is there a big lake in the middle of Southern California?
+      (created by mistake)
+    </question>
+    <option target="salton-sea-no">
+      No
+    </option>
+    <option target="salton-sea-yes">
+      Yes
+    </option>
+    <range>
+      <begin year="1860" />
+      <end year="1910" />
+    </range>
+  </node>
+  <leaf id="salton-sea-no">
+    <range>
+      <begin year="1860" />
+      <end year="1905" />
+    </range>
+  </leaf>
+  <leaf id="salton-sea-yes">
+    <range>
+      <begin year="1905" />
+      <end year="1910" />
+    </range>
+  </leaf>
+
+  <node id="lake-volta">
+    <question>
+      Is there a big lake in the middle of Ghana? (created on purpose)
+    </question>
+    <option target="lake-volta-no">
+      No
+    </option>
+    <option target="lake-volta-yes">
+      Yes
+    </option>
+    <range>
+      <begin year="1920" />
+      <end year="1970" />
+    </range>
+  </node>
+  <leaf id="lake-volta-no">
+    <range>
+      <begin year="1920" />
+      <end year="1960" />
+    </range>
+  </leaf>
+  <leaf id="lake-volta-yes">
+    <range>
+      <begin year="1960" />
+      <end year="1970" />
+    </range>
   </leaf>
   
+  <node id="aral-sea">
+    <question>
+      Is the Aral sea missing?
+    </question>
+    <option target="aral-sea-yes">
+      No
+    </option>
+    <option target="aral-sea-no">
+      Yes
+    </option>
+    <range>
+      <begin year="1970" />
+      <end year="" />
+    </range>
+  </node>
+  <leaf id="aral-sea-yes">
+    <range>
+      <begin year="1970" />
+      <end year="2000" />
+    </range>
+  </leaf>
+  <leaf id="aral-sea-no">
+    <range>
+      <begin year="2000" />
+      <end year="" />
+    </range>
+  </leaf>
+
+  <node id="sirion-anduin">
+    <question>
+      Rivers "Sirion" or "Anduin"?
+    </question>
+    <option target="cair-paravel">
+      No
+    </option>
+    <option target="mordor">
+      Yes
+    </option>
+  </node>
+
+  <node id="mordor">
+    <question>
+      Mordor?
+    </question>
+    <option target="beleriand">
+      No
+    </option>
+    <option target="numenor">
+      Yes
+    </option>
+  </node>
+
+  <node id="beleriand">
+    <question>
+      Beleriand?
+    </question>
+    <option target="beleriand-no">
+      No
+    </option>
+    <option target="beleriand-yes">
+      Yes
+    </option>
+  </node>
+  <leaf id="beleriand-no">
+    583 (Years of the Sun, First Age) to ca. 1000 (Second Age)
+  </leaf>
+  <leaf id="beleriand-yes">
+    before 583 (Years of the Sun, First Age)
+  </leaf>
+
+  <node id="numenor">
+    <question>
+      Númenor?
+    </question>
+    <option target="numenor-yes">
+      No
+    </option>
+    <option target="mirkwood">
+      Yes
+    </option>
+  </node>
+  <leaf id="numenor-yes">
+    ca 1000 (Second Age) to 3319 (Second Age)
+  </leaf>
+  
+  <node id="mirkwood">
+    <question>
+      The forest east of the Misty Mountains is...
+    </question>
+    <option target="greenwood">
+      Greenwood the Great
+    </option>
+    <option target="mirkwood">
+      Mirkwood
+    </option>
+    <option target="green-leaves">
+      The Wood of Greenleaves
+    </option>
+  </node>
+  <leaf id="greenwood">
+    3319 (Second Age) to 1050 (Third Age)
+  </leaf>
+  <leaf id="mirkwood">
+    1050 - 3019-03-28 (Third Age)
+  </leaf>
+  <leaf id="green-leaves">
+    3019-03-28 or later (Fourth Age)
+  </leaf>
+
+  <node id="cair-paravel">
+    <question>
+      Cair Paravel?
+    </question>
+    <option target="mossflower">
+      No
+    </option>
+    <option target="calormen">
+      Yes
+    </option>
+  </node>
+
+  <node id="calormen">
+    <question>
+      Calormen?
+    </question>
+    <option target="lotta">
+      No
+    </option>
+    <option target="recursive">
+      Yes
+    </option>
+  </node>
+
+  <node id="lotta">
+    <question>
+      Lotta islands?
+    </question>
+    <option target="beruna">
+      No
+    </option>
+    <option target="lotta-islands">
+      Yes
+    </option>
+  </node>
+  <leaf id="lotta-islands">
+    The Voyage of the Dawn Treader
+  </leaf>
+
+  <node id="beruna">
+    <question>
+      Beruna ...
+    </question>
+    <option target="beruna-ford">
+      Ford
+    </option>
+    <option target="beruna-bridge">
+      Bridge
+    </option>
+  </node>
+  <leaf id="beruna-ford">
+    The Lion, The Witch and The Wardrobe
+  </leaf>
+  <leaf id="beruna-bridge">
+    Prince Caspian
+  </leaf>
+
+  <node id="recursive">
+    <question>
+      Weird recursive heaven?
+    </question>
+    <option target="no-recursive">
+      No
+    </option>
+    <option target="yes-recursive">
+      Yes
+    </option>
+  </node>
+  <leaf id="no-recursive">
+    The Silver Chair [br /]
+    The Horse and His Boy [br /]
+    The Magician's Nephew
+  </leaf>
+  <leaf id="yes-recursive">
+    The Last Battle
+  </leaf>
+
+  <node id="mossflower">
+    <question>
+      Mossflower?
+    </question>
+    <option target="turtle">
+      No
+    </option>
+    <option target="redwall">
+      Yes
+    </option>
+  </node>
+  <leaf id="redwall">
+    Redwall
+  </leaf>
+
+  <node id="turtle">
+    <question>
+      Is the world on the back of a turtle?
+    </question>
+    <option target="sure-map">
+      No
+    </option>
+    <option target="discworld">
+      Yes
+    </option>
+  </node>
+  <leaf id="discworld">
+    Discworld
+  </leaf>
+
+  <node id="sure-map">
+    <question>
+      Are you [i]sure[/i] this is a map?
+    </question>
+    <option target="bite">
+      No
+    </option>
+    <option target="yourself">
+      Yes
+    </option>
+  </node>
+
+  <node id="yourself">
+    <question>
+      Did you make it yourself?
+    </question>
+    <option target="homemade">
+      Yes
+    </option>
+  </node>
+  <leaf id="homemade">
+    It's very nice.
+  </leaf>
+
+  <node id="bite">
+    <question>
+      Is it trying to bite you?
+    </question>
+    <option target="breadbox">
+      No
+    </option>
+    <option target="let-go">
+      Yes
+    </option>
+  </node>
+
+  <node id="breadbox">
+    <question>
+      Is it larger than a breadbox?
+    </question>
+    <option target="tuba">
+      Yes
+    </option>
+    <option target="stapler">
+      No
+    </option>
+    <option target="yes-breadbox">
+      About the same
+    </option>
+  </node>
+  <leaf id="tuba">
+    Tuba
+  </leaf>
+  <leaf id="stapler">
+    Stapler
+  </leaf>
+  <leaf id="yes-breadbox">
+    Breadbox
+  </leaf>
+
+  <node id="let-go">
+    <question>
+      If you let it go, what does it do?
+    </question>
+    <option target="cat">
+      Hisses and runs away.
+    </option>
+    <option target="seagull">
+      Screeches and flaps around the room breaking things.
+    </option>
+  </node>
+  <leaf id="cat">
+    Cat
+  </leaf>
+  <leaf id="seagull">
+    Seagull
+  </leaf>
 </xkcd1688>
